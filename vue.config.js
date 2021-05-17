@@ -3,7 +3,7 @@ module.exports = {
     extract: false,
     loaderOptions: {
       sass: {
-        additionalData: `@import "~@/styles/scss-utilities";`
+        additionalData: `@use "~@/styles/scss-utilities";`
       }
     }
   }
