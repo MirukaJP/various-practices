@@ -1,3 +1,16 @@
+// Colors
+$primary: #5cc2d6;
+$primary-light: #eff9fb;
+$secondary: #d9e54d;
+$gray: #73878c;
+$white: #fff;
+$black: #000;
+
 .test {
-  background-color: #eef;
+  color: $primary;
+}
+
+@mixin mxButton {
+  background-color: $primary;
+  color: $white;
 }

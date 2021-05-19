@@ -1,7 +1,7 @@
 <template>
   <p class="TestComponent">
     Test Component.<br>
-    {{hoge}}
+    {{foo}}
   </p>
 </template>
 
@@ -11,11 +11,16 @@ export default {
   props: {
     hoge: String,
   },
+  data () {
+    return {
+      foo: "It's data foo."
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 .TestComponent {
-  color: rgb(190, 72, 127);
+  color: $primary;
 }
 </style>
