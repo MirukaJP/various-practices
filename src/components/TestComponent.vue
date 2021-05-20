@@ -1,11 +1,19 @@
 <template>
-  <p class="TestComponent">
+  <div class="TestComponent">
+    <p>
     Test Component.<br>
-    {{foo}}
+    {{ foo }}
+    </p>
+  <p>
+    {{ skills }}
   </p>
+  </div>
 </template>
 
 <script>
+// import axios from 'axios';
+const axios = require('axios');
+
 export default {
   name: "TestComponent",
   props: {
@@ -13,8 +21,20 @@ export default {
   },
   data () {
     return {
-      foo: "It's data foo."
+      foo: "It's data foo.",
+      skills: []
     }
+  },
+  methods: {
+    MySkill: function() {
+      // axios.get('../datas/mySkill.json')
+      // .then(response => (this.skills = response))
+      const skillData = axios.get('../datas/mySkill.json');
+      this.skills = skillData;
+    }
+  },
+  mounted () {
+    this.MySkill();
   }
 };
 </script>

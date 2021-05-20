@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
+    <h1>My Practice Project!</h1>
     <test-component hoge="It's hoge props." />
   </div>
 </template>
