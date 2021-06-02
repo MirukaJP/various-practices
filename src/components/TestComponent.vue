@@ -11,8 +11,7 @@
 </template>
 
 <script>
-// import axios from 'axios';
-const axios = require('axios');
+import mySkill from '../datas/mySkill.json';
 
 export default {
   name: "TestComponent",
@@ -22,20 +21,13 @@ export default {
   data () {
     return {
       foo: "It's data foo.",
-      skills: []
+      skills: mySkill
     }
   },
-  methods: {
-    MySkill: function() {
-      // axios.get('../datas/mySkill.json')
-      // .then(response => (this.skills = response))
-      const skillData = axios.get('../datas/mySkill.json');
-      this.skills = skillData;
-    }
-  },
-  mounted () {
-    this.MySkill();
-  }
+  // methods: {
+  //   MySkill: function() {}
+  // },
+  // created () {}
 };
 </script>
 
