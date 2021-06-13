@@ -18,6 +18,7 @@
           "each",
           "media",
           "supports",
+          "at-root",
           "include"
         ]
       }
