@@ -7,7 +7,11 @@
     </p>
     <p>
       {{ isToggle }}<br>
-      <c-button text="Hey!" @test="ButtonAction" />
+      <c-button 
+        text="Hey!" 
+        :class="classes"
+        @test="ButtonAction"
+      />
     </p>
     <transition name="fade">
       <p :key="isToggle">
@@ -35,7 +39,11 @@ export default {
       foo: "It's data foo.",
       isToggle: true,
       skills: mySkill,
-      topics: Topics
+      topics: Topics,
+      classes: {
+        _dark: true,
+        _primary: false,
+      }
     }
   },
   methods: {
@@ -52,10 +60,12 @@ export default {
   color: $primary;
 }
 
-.fade-enter-active, .fade-leave-active {
+.fade-enter-active
+, .fade-leave-active {
   transition: opacity .5s;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+.fade-enter
+, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
 </style>
